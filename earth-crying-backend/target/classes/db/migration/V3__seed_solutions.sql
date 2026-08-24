@@ -1,0 +1,40 @@
+-- Flyway Migration: V3__seed_solutions.sql
+-- Sample solutions for impact categories
+
+INSERT INTO solutions (id, impact_id, title, description, effort_level, action_scale, impact_score, co2_saved_kg_per_year, water_saved_liters_per_year, money_saved_usd_per_year, external_resource_url, display_order, is_active, created_at, updated_at) VALUES
+-- Digital Carbon Footprint solutions
+('10000000-0000-0000-0000-000000000001', '00000000-0000-0000-0000-000000000001', 'Unsubscribe from Marketing Emails', 'Delete one marketing email subscription, reducing server requests and carbon emissions.', 'ONE_MINUTE', 'INDIVIDUAL', 5, 0.5, 0, 0, 'https://www.unsubscriper.com', 1, true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('10000000-0000-0000-0000-000000000002', '00000000-0000-0000-0000-000000000001', 'Use Dark Mode', 'Switch your devices to dark mode to reduce energy consumption by up to 30% on OLED screens.', 'WEEKLY_HABIT', 'INDIVIDUAL', 8, 2.5, 0, 0, 'https://www.darkmode.com', 2, true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('10000000-0000-0000-0000-000000000003', '00000000-0000-0000-0000-000000000001', 'Cloud Provider Audit', 'Audit your cloud services and switch to providers committed to 100% renewable energy.', 'LIFESTYLE_CHANGE', 'INDIVIDUAL', 50, 1200, 1000, 500, 'https://www.cloudcarbonfootprint.com', 3, true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('10000000-0000-0000-0000-000000000004', '00000000-0000-0000-0000-000000000001', 'Data Minimization Challenge', 'Reduce data collection by 50% across your digital habits for 30 days.', 'LIFESTYLE_CHANGE', 'COMMUNITY', 30, 800, 500, 200, 'https://www.dataminimization.org', 4, true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+-- Tire & Brake Dust solutions
+('10000000-0000-0000-0000-000000000005', '00000000-0000-0000-0000-000000000002', 'Tire Pressure Check', 'Maintaining proper tire pressure reduces rolling resistance and particulate emissions by 20%.', 'ONE_MINUTE', 'INDIVIDUAL', 10, 3.2, 0, 0, 'https://www.tirepressure.org', 1, true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('10000000-0000-0000-0000-000000000006', '00000000-0000-0000-0000-000000000002', 'Brake Maintenance', 'Regular brake maintenance ensures optimal performance, reducing brake dust emissions by up to 40%.', 'WEEKLY_HABIT', 'INDIVIDUAL', 15, 5.5, 0, 0, 'https://www.brakemaintenance.com', 2, true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('10000000-0000-0000-0000-000000000007', '00000000-0000-0000-0000-000000000002', 'EV Ownership Program', 'Partner with local EV communities to share responsible charging practices and tire selection.', 'LIFESTYLE_CHANGE', 'COMMUNITY', 100, 1500, 0, 0, 'https://www.evcommunity.org', 3, true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+-- Fast Fashion Microplastics solutions
+('10000000-0000-0000-0000-000000000008', '00000000-0000-0000-0000-000000000003', 'Microfiber Filter', 'Install a microfiber catcher in your washing machine to trap 90% of microfibers before they enter waterways.', 'ONE_MINUTE', 'INDIVIDUAL', 25, 40, 250, 15, 'https://www.microfilternow.com', 1, true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('10000000-0000-0000-0000-000000000009', '00000000-0000-0000-0000-000000000003', 'Wash in Cold Water', 'Cold water washes reduce microfiber shedding by 30% and save energy.', 'WEEKLY_HABIT', 'INDIVIDUAL', 12, 15, 100, 8, 'https://www.coldwash.org', 2, true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('10000000-0000-0000-0000-000000000010', '00000000-0000-0000-0000-000000000003', 'Second-Hand First', 'Build a second-hand wardrobe rotation to reduce new clothing purchases by 80%.', 'LIFESTYLE_CHANGE', 'INDIVIDUAL', 60, 500, 2000, 300, 'https://www.thriftstoremethod.com', 3, true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+-- Light Pollution solutions
+('10000000-0000-0000-0000-000000000011', '00000000-0000-0000-0000-000000000004', 'Shield Your Lights', 'Install motion sensors and shields on outdoor lights to reduce sky glow and protect nocturnal wildlife.', 'ONE_MINUTE', 'INDIVIDUAL', 20, 0, 0, 0, 'https://www.darksky.org', 1, true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('10000000-0000-0000-0000-000000000012', '00000000-0000-0000-0000-000000000004', 'Night Sky Photography', 'Join a citizen science project that monitors light pollution through night sky photography.', 'WEEKLY_HABIT', 'COMMUNITY', 35, 0, 0, 0, 'https://www.globeatnight.nasa.gov', 2, true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('10000000-0000-0000-0000-000000000013', '00000000-0000-0000-0000-000000000004', 'Advocate for Dark Sky Laws', 'Support local ordinances that require shielding on commercial lighting installations.', 'LIFESTYLE_CHANGE', 'POLICY', 80, 0, 0, 0, 'https://www.darksky.org/our-work/light_pollution/', 3, true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+-- Fertilizer Runoff solutions
+('10000000-0000-0000-0000-000000000014', '00000000-0000-0000-0000-000000000005', 'Rain Garden Installation', 'Plant a rain garden to absorb runoff and filter nutrients before they reach waterways.', 'ONE_MINUTE', 'INDIVIDUAL', 30, 0, 5000, 200, 'https://www.raingardens.org', 1, true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('10000000-0000-0000-0000-000000000015', '00000000-0000-0000-0000-000000000005', 'Soil Testing Kit', 'Test your garden soil annually to apply only the exact nutrients needed.', 'WEEKLY_HABIT', 'INDIVIDUAL', 18, 0, 1000, 25, 'https://www.soiltestkit.com', 2, true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('10000000-0000-0000-0000-000000000016', '00000000-0000-0000-0000-000000000005', 'Support Regenerative Farms', 'Buy produce from farms using regenerative practices that build soil health.', 'LIFESTYLE_CHANGE', 'INDIVIDUAL', 40, 0, 8000, 600, 'https://www.regeneration_ag.org', 3, true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+-- E-waste solutions
+('10000000-0000-0000-0000-000000000017', '00000000-0000-0000-0000-000000000006', 'Device Trade-In Program', 'Trade in old devices through certified recyclers to ensure proper material recovery.', 'ONE_MINUTE', 'INDIVIDUAL', 15, 25, 0, 50, 'https://www.ecycle.com', 1, true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('10000000-0000-0000-0000-000000000018', '00000000-0000-0000-0000-000000000006', 'Phone Upgrade Delay', 'Extend smartphone lifespans by 2 years, reducing e-waste by 40% per device.', 'WEEKLY_HABIT', 'INDIVIDUAL', 25, 60, 0, 100, 'https://www.longertoken.com', 2, true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('10000000-0000-0000-0000-000000000019', '00000000-0000-0000-0000-000000000006', 'Support Right to Repair', 'Advocate for legislation that ensures electronic devices can be repaired by consumers.', 'LIFESTYLE_CHANGE', 'POLICY', 90, 0, 0, 0, 'https://www.righttorepair.org', 3, true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+
+-- Hidden Water Footprint solutions
+('10000000-0000-0000-0000-000000000020', '00000000-0000-0000-0000-000000000007', 'Greywater System', 'Install a greywater system to reuse water from sinks for garden irrigation.', 'ONE_MINUTE', 'INDIVIDUAL', 45, 0, 8000, 400, 'https://www.greysystem.com', 1, true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('10000000-0000-0000-0000-000000000021', '00000000-0000-0000-0000-000000000007', 'Drought-Resistant Landscaping', 'Replace lawn with drought-resistant plants that need 70% less water.', 'WEEKLY_HABIT', 'INDIVIDUAL', 30, 0, 15000, 300, 'https://www.waterwise.org.uk', 2, true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('10000000-0000-0000-0000-000000000022', '00000000-0000-0000-0000-000000000007', 'Water Audit Program', 'Organize community workshops on water conservation and leak detection.', 'LIFESTYLE_CHANGE', 'COMMUNITY', 60, 0, 10000, 500, 'https://www.wateraudit.org', 3, true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP),
+('10000000-0000-0000-0000-000000000023', '00000000-0000-0000-0000-000000000007', 'Support Virtual Meetings', 'Advocate for water-efficient policies in corporate travel and meeting planning.', 'LIFESTYLE_CHANGE', 'POLICY', 75, 50000, 0, 0, 'https://www.virtualmeetings.gov', 4, true, CURRENT_TIMESTAMP, CURRENT_TIMESTAMP);

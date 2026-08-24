@@ -1,0 +1,126 @@
+spring:
+  application:
+    name: earth-crying-backend
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/earthcrying
+    username: postgres
+    password: 9758561213
+    driver-class-name: org.postgresql.Driver
+    hikari:
+      maximum-pool-size: 20
+      minimum-idle: 5
+      connection-timeout: 30000
+      idle-timeout: 600000
+      max-lifetime: 1800000
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        jdbc:
+          lob:
+            non_contextual_creation: true
+
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+    baseline-on-migrate: true
+    validate-on-migrate: true
+
+  redis:
+    host: ${REDIS_HOST:localhost}
+    port: ${REDIS_PORT:6379}
+    password: ${REDIS_PASSWORD:}
+    timeout: 5000ms
+    lettuce:
+      pool:
+        max-active: 20
+        max-idle: 10
+        min-idle: 2
+
+  cache:
+    type: simple
+
+  servlet:
+    multipart:
+      max-file-size: 50MB
+      max-request-size: 50MB
+
+  mail:
+    host: ${MAIL_HOST:smtp.gmail.com}
+    port: ${MAIL_PORT:587}
+    username: ${MAIL_USERNAME:}
+    password: ${MAIL_PASSWORD:}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
+server:
+  port: ${PORT:8080}
+  compression:
+    enabled: true
+    mime-types: application/json,application/xml,text/html,text/xml,text/plain,application/javascript,text/css
+    min-response-size: 1024
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+    operations-sorter: method
+    tags-sorter: alpha
+
+app:
+  jwt:
+    secret: ${JWT_SECRET:earth-crying-super-secret-key-change-in-production-min-256-bits}
+    expiration: 86400000
+    refresh-expiration: 604800000
+
+  cors:
+    allowed-origins: ${CORS_ALLOWED_ORIGINS:http://localhost:3000}
+    allowed-methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+    allowed-headers: "*"
+    allow-credentials: true
+
+  scheduler:
+    enabled: true
+    hope-ledger-cron: "0 */15 * * * *"
+    earth-pulse-interval: 1000
+
+  external-apis:
+    global-forest-watch:
+      base-url: https://data-api.globalforestwatch.org
+      api-key: ${GFW_API_KEY:}
+    noaa:
+      base-url: https://www.ncei.noaa.gov/access/services/data/v1
+      api-key: ${NOAA_API_KEY:}
+    openaq:
+      base-url: https://api.openaq.org/v2
+      api-key: ${OPENAQ_API_KEY:}
+    world-bank:
+      base-url: https://api.worldbank.org/v2
+    nasa:
+      base-url: https://api.nasa.gov
+      api-key: ${NASA_API_KEY:DEMO_KEY}
+
+logging:
+  level:
+    com.earthcrying: DEBUG
+    org.springframework.web: INFO
+    org.hibernate.SQL: WARN
+    org.flywaydb: INFO
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  file:
+    name: logs/earth-crying.log
+    max-size: 100MB
+    max-history: 30
